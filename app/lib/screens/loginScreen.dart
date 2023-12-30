@@ -32,18 +32,20 @@ class _LogInScreenState extends State<LogInScreen> {
                   image: AssetImage('assets/images/logo.png'),
                   height: 60,
                 ),
-                SizedBox(height: 40),
+                SizedBox(height: 50),
                 SizedBox(
-                  height: 52,
+                  height: 42,
                   child: TextField(
+                    
                     controller: _UsernameController,
                     cursorColor: Colors.white,
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(color: Colors.white,fontSize: 14),
                     decoration: InputDecoration(
+                      contentPadding: EdgeInsets.symmetric(vertical:1,horizontal:20),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                         borderSide: const BorderSide(
-                          color: Color(0xff535353),
+                          color: Color.fromARGB(255, 151, 151, 151),
                         ),
                       ),
                       enabledBorder: OutlineInputBorder(
@@ -52,26 +54,29 @@ class _LogInScreenState extends State<LogInScreen> {
                           color: Color(0xff535353),
                         ),
                       ),
+                      
                       hintText: "Phone number, email or username",
                       hintStyle: TextStyle(
-                          fontSize: 14,
+                          fontSize: 13,
                           color: secondaryColor,
-                          fontWeight: FontWeight.w400),
+                          fontWeight: FontWeight.w400
+                          ),
                     ),
                   ),
                 ),
                 SizedBox(height: 30),
                 SizedBox(
-                  height: 52,
+                  height: 42,
                   child: TextField(
                     controller: _PasswordController,
                     cursorColor: Colors.white,
                     style: TextStyle(color: Colors.white),
                     decoration: InputDecoration(
+                      contentPadding: EdgeInsets.symmetric(vertical:1,horizontal:20),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                         borderSide: const BorderSide(
-                          color: Color(0xff535353),
+                          color: Color.fromARGB(255, 151, 151, 151),
                         ),
                       ),
                       enabledBorder: OutlineInputBorder(
@@ -106,9 +111,9 @@ class _LogInScreenState extends State<LogInScreen> {
                   onTap: () =>
                       {Navigator.of(context).pushNamed(MyRoutes.LandingRoute)},
                   child: Container(
-                    child: const Text("Login",style:TextStyle(color:Colors.white,fontSize: 18,)),
+                    child: const Text("Login",style:TextStyle(color:Colors.white,fontSize: 16,)),
                     width: double.infinity,
-                    height: 48,
+                    height: 42,
                     alignment: Alignment.center,
                     decoration: const ShapeDecoration(
                         shape: RoundedRectangleBorder(
