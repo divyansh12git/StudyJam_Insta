@@ -1,5 +1,8 @@
 import 'package:app/screens/loginScreen.dart';
+import 'package:app/utils/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:app/utils/colors.dart';
+import 'package:app/screens/landingPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,11 +17,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: LogInScreen(),
+      initialRoute: '/',
+      routes: {
+        '/':(context) => LogInScreen(),
+        MyRoutes.LandingRoute:(context)=>LandingPage(),
+      },
     );
   }
 }
