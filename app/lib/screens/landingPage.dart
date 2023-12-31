@@ -100,8 +100,8 @@ class _LandingPageState extends State<LandingPage> {
                   desc:
                       'Very Good Expierence in switzerland and see the view zzzzzzzzz',
                   date: "3 days ago"),
-                  //second post component
-                  Post(
+              //second post component
+              Post(
                   userImg:
                       'https://www.lovepanky.com/wp-content/uploads/2017/12/Flirty-Things-to-Say-to-a-Girl-1.jpg',
                   userName: 'Katherian',

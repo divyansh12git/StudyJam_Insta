@@ -10,15 +10,12 @@ class LogInScreen extends StatefulWidget {
 }
 
 class _LogInScreenState extends State<LogInScreen> {
-  final TextEditingController _UsernameController = TextEditingController();
-  final TextEditingController _PasswordController = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SafeArea(
-      child: SingleChildScrollView(
-        child: Container(
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Container(
             padding: EdgeInsets.symmetric(horizontal: 20),
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
@@ -35,8 +32,7 @@ class _LogInScreenState extends State<LogInScreen> {
                 SizedBox(height: 50),
                 SizedBox(
                   height: 42,
-                  child: TextField(
-                    controller: _UsernameController,
+                  child: TextFormField(
                     cursorColor: Colors.white,
                     style: TextStyle(color: Colors.white, fontSize: 14),
                     decoration: InputDecoration(
@@ -65,8 +61,7 @@ class _LogInScreenState extends State<LogInScreen> {
                 SizedBox(height: 30),
                 SizedBox(
                   height: 42,
-                  child: TextField(
-                    controller: _PasswordController,
+                  child: TextFormField(
                     cursorColor: Colors.white,
                     style: TextStyle(color: Colors.white),
                     decoration: InputDecoration(
@@ -97,7 +92,7 @@ class _LogInScreenState extends State<LogInScreen> {
                 Row(
                   children: [
                     Expanded(
-                      flex:5,
+                      flex: 5,
                       child: SizedBox(),
                     ),
                     Text("Forget Password?",
@@ -149,9 +144,10 @@ class _LogInScreenState extends State<LogInScreen> {
                 ),
                 Spacer(flex: 2)
               ],
-            ),),
+            ),
+          ),
+        ),
       ),
-    ),
     );
   }
 }
