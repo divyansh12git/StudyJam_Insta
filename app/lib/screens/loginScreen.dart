@@ -27,7 +27,7 @@ class _LogInScreenState extends State<LogInScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Spacer(flex:5),
+                Spacer(flex: 5),
                 Image(
                   image: AssetImage('assets/images/logo.png'),
                   height: 60,
@@ -36,12 +36,12 @@ class _LogInScreenState extends State<LogInScreen> {
                 SizedBox(
                   height: 42,
                   child: TextField(
-                    
                     controller: _UsernameController,
                     cursorColor: Colors.white,
-                    style: TextStyle(color: Colors.white,fontSize: 14),
+                    style: TextStyle(color: Colors.white, fontSize: 14),
                     decoration: InputDecoration(
-                      contentPadding: EdgeInsets.symmetric(vertical:1,horizontal:20),
+                      contentPadding:
+                          EdgeInsets.symmetric(vertical: 1, horizontal: 20),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                         borderSide: const BorderSide(
@@ -54,13 +54,11 @@ class _LogInScreenState extends State<LogInScreen> {
                           color: Color(0xff535353),
                         ),
                       ),
-                      
                       hintText: "Phone number, email or username",
                       hintStyle: TextStyle(
                           fontSize: 13,
                           color: secondaryColor,
-                          fontWeight: FontWeight.w400
-                          ),
+                          fontWeight: FontWeight.w400),
                     ),
                   ),
                 ),
@@ -72,7 +70,8 @@ class _LogInScreenState extends State<LogInScreen> {
                     cursorColor: Colors.white,
                     style: TextStyle(color: Colors.white),
                     decoration: InputDecoration(
-                      contentPadding: EdgeInsets.symmetric(vertical:1,horizontal:20),
+                      contentPadding:
+                          EdgeInsets.symmetric(vertical: 1, horizontal: 20),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                         borderSide: const BorderSide(
@@ -111,7 +110,13 @@ class _LogInScreenState extends State<LogInScreen> {
                   onTap: () =>
                       {Navigator.of(context).pushNamed(MyRoutes.LandingRoute)},
                   child: Container(
-                    child: const Text("Login",style:TextStyle(color:Colors.white,fontSize: 16,)),
+                    child: const Text(
+                      "Login",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                      ),
+                    ),
                     width: double.infinity,
                     height: 42,
                     alignment: Alignment.center,
@@ -124,21 +129,28 @@ class _LogInScreenState extends State<LogInScreen> {
                         color: primaryColor),
                   ),
                 ),
-                Spacer(flex:5),
+                Spacer(flex: 5),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("Don't have account ? ",style: TextStyle(color: secondaryColor),),
+                    Text(
+                      "Don't have account ? ",
+                      style: TextStyle(color: secondaryColor),
+                    ),
                     GestureDetector(
-                      onTap: (){},
-                      child: Text("SignUp",style:TextStyle(color: primaryColor)),
+                      onTap: () {},
+                      child: Text(
+                        "SignUp",
+                        style: TextStyle(color: primaryColor),
+                      ),
                     )
                   ],
                 ),
-                Spacer(flex:2)
+                Spacer(flex: 2)
               ],
-            )),
+            ),),
       ),
-    ));
+    ),
+    );
   }
 }
