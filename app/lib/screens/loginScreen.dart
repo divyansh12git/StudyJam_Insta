@@ -97,6 +97,7 @@ class _LogInScreenState extends State<LogInScreen> {
                 Row(
                   children: [
                     Expanded(
+                      flex:5,
                       child: SizedBox(),
                     ),
                     Text("Forget Password?",
